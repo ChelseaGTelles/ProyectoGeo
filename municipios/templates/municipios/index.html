@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Estados y Municipios (AJAX + Django)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body style="padding:20px;">
+  <h1>Selecciona Estado y Municipio</h1>
+
+  <label for="estado-select">Estado:</label>
+  <select id="estado-select">
+    <option value="">-- Selecciona un estado --</option>
+    {% for estado in estados %}
+      <option value="{{ estado.id }}">{{ estado.nombre }}</option>
+    {% endfor %}
+  </select>
+
+  <br/><br/>
+
+  <label for="municipio-select">Municipio:</label>
+  <select id="municipio-select" disabled>
+    <option value="">-- Primero selecciona un estado --</option>
+  </select>
+
+  <div id="mensaje" style="margin-top:1rem;color:#444;"></div>
+
+  <script src="{% static 'locations/js/locations.js' %}"></script>
+</body>
+</html>

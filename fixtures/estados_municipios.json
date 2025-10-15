@@ -1,0 +1,15 @@
+[
+  {"model": "municipios.estado", "pk": 1, "fields": {"nombre": "Aguascalientes"}},
+  {"model": "municipios.estado", "pk": 2, "fields": {"nombre": "Baja California"}},
+  {"model": "municipios.estado", "pk": 3, "fields": {"nombre": "Chiapas"}},
+  {"model": "municipios.estado", "pk": 4, "fields": {"nombre": "Guanajuato"}},
+
+  {"model": "municipios.municipio", "pk": 1, "fields": {"estado": 1, "nombre": "Aguascalientes"}},
+  {"model": "municipios.municipio", "pk": 2, "fields": {"estado": 1, "nombre": "San Francisco de los Romo"}},
+  {"model": "municipios.municipio", "pk": 3, "fields": {"estado": 2, "nombre": "Mexicali"}},
+  {"model": "municipios.municipio", "pk": 4, "fields": {"estado": 2, "nombre": "Tijuana"}},
+  {"model": "municipios.municipio", "pk": 5, "fields": {"estado": 3, "nombre": "Tuxtla Gutiérrez"}},
+  {"model": "municipios.municipio", "pk": 6, "fields": {"estado": 3, "nombre": "San Cristóbal de las Casas"}},
+  {"model": "municipios.municipio", "pk": 7, "fields": {"estado": 4, "nombre": "Uriangato"}},
+  {"model": "municipios.municipio", "pk": 8, "fields": {"estado": 4, "nombre": "Moroleón"}}
+]
