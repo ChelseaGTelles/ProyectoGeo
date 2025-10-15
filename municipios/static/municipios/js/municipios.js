@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   estadoSelect.addEventListener('change', async function () {
     const estadoId = this.value;
-    // limpiar municipios
     municipioSelect.innerHTML = '';
     if (!estadoId) {
       municipioSelect.disabled = true;
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    mensaje.textContent = 'Cargando municipios...';
     municipioSelect.disabled = true;
 
     try {
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
         throw new Error(data.error || 'Respuesta inesperada');
       }
 
-      // poblar select de municipios
       municipioSelect.innerHTML = '<option value="">-- Selecciona un municipio --</option>';
       data.municipios.forEach(m => {
         const opt = document.createElement('option');
@@ -43,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       municipioSelect.disabled = false;
-      mensaje.textContent = `Se cargaron ${data.municipios.length} municipios.`;
     } catch (err) {
       mensaje.textContent = 'Error al cargar municipios: ' + err.message;
       municipioSelect.disabled = true;
